@@ -31,6 +31,7 @@ import { buildTypeUsagesMap } from "./analyze/build-type-usages-map"
 import { selectionSetIncludes } from "../utils/ast-compare"
 import { addRemoteTypeNameField } from "./ast-transformers/add-remote-typename-field"
 import * as GraphQLAST from "../utils/ast-nodes"
+import { ASTReducer } from "graphql/language/visitor"
 
 interface ICompileNodeQueriesArgs {
   schema: GraphQLSchema
@@ -146,7 +147,7 @@ function compileDocument(
     visitWithTypeInfo(typeInfo, addVariableDefinitions({ typeInfo }))
   )
 
-  return visit(doc, removeUnusedFragments())
+  return visit(doc, removeUnusedFragments() as ASTReducer<DocumentNode>)
 }
 
 function getIdFragment(

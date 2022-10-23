@@ -1,15 +1,10 @@
-import {
-  ASTKindToNode,
-  FragmentDefinitionNode,
-  SelectionNode,
-  Visitor,
-} from "graphql"
+import { ASTVisitor, FragmentDefinitionNode, SelectionNode } from "graphql"
 import * as GraphQLAST from "../../utils/ast-nodes"
 import { isFragmentSpread } from "../../utils/ast-predicates"
 
 export function addNodeFragmentSpreadsAndTypename(
   nodeFragments: FragmentDefinitionNode[]
-): Visitor<ASTKindToNode> {
+): ASTVisitor {
   return {
     FragmentDefinition: () => false,
     SelectionSet: node => {

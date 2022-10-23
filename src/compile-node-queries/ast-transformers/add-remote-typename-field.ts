@@ -1,10 +1,9 @@
 import {
   TypeInfo,
-  Visitor,
-  ASTKindToNode,
   SelectionSetNode,
   isCompositeType,
   getNamedType,
+  ASTVisitor,
 } from "graphql"
 import * as GraphQLAST from "../../utils/ast-nodes"
 import { isField, isNode, isTypeNameField } from "../../utils/ast-predicates"
@@ -30,7 +29,7 @@ interface IAddTypeNameArgs {
  */
 export function addRemoteTypeNameField({
   typeInfo,
-}: IAddTypeNameArgs): Visitor<ASTKindToNode> {
+}: IAddTypeNameArgs): ASTVisitor {
   return {
     SelectionSet: (node, _, parent) => {
       const type = typeInfo.getType()

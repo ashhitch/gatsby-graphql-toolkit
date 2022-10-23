@@ -3,6 +3,7 @@ import {
   FieldNode,
   FragmentDefinitionNode,
   GraphQLSchema,
+  Kind,
   TypeInfo,
   visit,
   visitWithTypeInfo,
@@ -57,7 +58,7 @@ export function buildTypeUsagesMap(
   args: IBuildTypeUsagesMapArgs
 ): TypeUsagesMap {
   const fullDocument: DocumentNode = {
-    kind: "Document",
+    kind: Kind.DOCUMENT,
     definitions: args.fragments,
   }
 

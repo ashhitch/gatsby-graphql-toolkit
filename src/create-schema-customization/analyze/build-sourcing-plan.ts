@@ -5,11 +5,10 @@ import {
   visit,
   visitWithTypeInfo,
   visitInParallel,
-  Visitor,
-  ASTKindToNode,
   getNamedType,
   isUnionType,
   isEnumType,
+  ASTVisitor,
 } from "graphql"
 import {
   IGatsbyNodeDefinition,
@@ -37,9 +36,9 @@ function buildFetchedTypeMap(args: IBuildSourcingPlanArgs) {
   const typeInfo = new TypeInfo(schema)
 
   const Visitors: {
-    collectTypeFields: Visitor<ASTKindToNode>
-    addUnionTypes: Visitor<ASTKindToNode>
-    addEnumTypes: Visitor<ASTKindToNode>
+    collectTypeFields: ASTVisitor
+    addUnionTypes: ASTVisitor
+    addEnumTypes: ASTVisitor
   } = {
     collectTypeFields: {
       Field: (node: FieldNode) => {

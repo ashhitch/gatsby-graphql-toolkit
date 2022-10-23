@@ -17,10 +17,9 @@ import {
   ArgumentNode,
   astFromValue,
   isNonNullType,
-  Visitor,
-  ASTKindToNode,
   FragmentSpreadNode,
   TypeInfo,
+  ASTVisitor,
 } from "graphql"
 import * as GraphQLAST from "../utils/ast-nodes"
 import {
@@ -122,7 +121,7 @@ function generateDefaultFragment(
 
 function inlineNamedFragments(
   args: IGenerateDefaultFragmentContext
-): Visitor<ASTKindToNode> {
+): ASTVisitor {
   const typeStack: string[] = []
   return {
     FragmentSpread: (node: FragmentSpreadNode, _, __) => {

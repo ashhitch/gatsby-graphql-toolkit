@@ -2,6 +2,7 @@ import { inspect } from "util"
 import PQueue, { Options as PQueueOptions } from "p-queue"
 import fetch, { RequestInit as FetchOptions } from "node-fetch"
 import { IQueryExecutionArgs, IQueryExecutor } from "../types"
+import { ExecutionResult } from "graphql"
 
 export function createNetworkQueryExecutor(
   uri: string,
@@ -25,7 +26,7 @@ export function createNetworkQueryExecutor(
           `Query variables: ${inspect(variables)}`
       )
     }
-    const result = await response.json()
+    const result = (await response.json()) as ExecutionResult
 
     if (result.data && result.errors?.length) {
       console.warn(
