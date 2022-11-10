@@ -1,0 +1,1 @@
+{"version":3,"file":"gatsby-api.js","sourceRoot":"","sources":["../../../src/__tests__/test-utils/gatsby-api.ts"],"names":[],"mappings":";;;AAAA,0EAO+C;AAGlC,QAAA,aAAa,GAAQ;IAChC,MAAM,EAAE;QACN,eAAe,EAAf,+BAAe;QACf,cAAc,EAAd,8BAAc;QACd,kBAAkB,EAAlB,kCAAkB;QAClB,oBAAoB,EAApB,oCAAoB;QACpB,aAAa,EAAb,6BAAa;QACb,eAAe,EAAf,+BAAe;KAChB;CACF,CAAA;AAEY,QAAA,SAAS,GAAmB,qBAAa,CAAA"}

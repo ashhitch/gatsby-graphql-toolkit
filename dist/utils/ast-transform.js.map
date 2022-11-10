@@ -1,0 +1,1 @@
+{"version":3,"file":"ast-transform.js","sourceRoot":"","sources":["../../src/utils/ast-transform.ts"],"names":[],"mappings":";;;AAEA,SAAgB,UAAU,CACxB,IAAO,EACP,WAAqC;IAErC,OAAO;QACL,GAAG,IAAI;QACP,IAAI,EAAE;YACJ,GAAG,IAAI,CAAC,IAAI;YACZ,KAAK,EAAE,WAAW,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC;SACpC;KACF,CAAA;AACH,CAAC;AAXD,gCAWC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"format-log-message.js","sourceRoot":"","sources":["../../src/utils/format-log-message.ts"],"names":[],"mappings":";;;AAAA,SAAS,gBAAgB,CAAC,KAAK;IAC7B,IAAI,OAAO,CAAA;IACX,IAAI,OAAO,KAAK,KAAK,QAAQ,EAAE;QAC7B,OAAO,GAAG,KAAK,CAAA;KAChB;SAAM;QACL,OAAO,GAAG,KAAK,CAAC,CAAC,CAAC,CAAA;KACnB;IAED,OAAO,OAAO,CAAA;AAChB,CAAC;AAEQ,4CAAgB"}

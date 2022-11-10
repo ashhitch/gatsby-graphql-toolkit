@@ -1,0 +1,14 @@
+import { ArgumentNode, BooleanValueNode, DefinitionNode, DirectiveNode, DocumentNode, FieldNode, FragmentDefinitionNode, FragmentSpreadNode, InlineFragmentNode, NamedTypeNode, NameNode, SelectionNode, SelectionSetNode, StringValueNode, ValueNode } from "graphql";
+export declare function document(definitions: DefinitionNode[]): DocumentNode;
+export declare function fragmentDefinition(fragmentName: string, typeName: string, selections: SelectionNode[]): FragmentDefinitionNode;
+export declare function inlineFragment(typeCondition: string, selections: readonly SelectionNode[]): InlineFragmentNode;
+export declare function selectionSet(selections?: readonly SelectionNode[]): SelectionSetNode;
+export declare function field(fieldName: string, alias?: string, args?: ArgumentNode[], selections?: SelectionNode[], directives?: DirectiveNode[]): FieldNode;
+export declare function arg(argName: string, value: ValueNode): ArgumentNode;
+export declare function name(value: string): NameNode;
+export declare function namedType(typeName: string): NamedTypeNode;
+export declare function fragmentSpread(fragmentName: string): FragmentSpreadNode;
+export declare function directive(directiveName: string, args?: ArgumentNode[]): DirectiveNode;
+export declare function skipDirective(condition?: boolean): DirectiveNode;
+export declare function boolValue(value: boolean): BooleanValueNode;
+export declare function stringValue(value: string): StringValueNode;
